@@ -76,7 +76,6 @@
     margin-bottom: 116px;
     gap: 45px;
     position: relative;
-
 }
 
 .product-title {
@@ -88,9 +87,6 @@
     margin-top: 220px;
     text-align: center;
     color: #515076;
-    margin-top: 220px;
-    text-align: center;
-    
 }
 
 .background-image {
@@ -103,5 +99,4 @@
     left: 175px;
     z-index: -1;
     background-size: 790px 697px;
-    
 }
