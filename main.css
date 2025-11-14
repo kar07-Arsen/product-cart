@@ -9,7 +9,7 @@
     font-weight: 400;
 }
 
-.card-conteiner {
+.card-container {
     width: 340px;
     height: 573px;
     padding: 25px;
@@ -50,11 +50,11 @@
 }
 
 .product-price-container {
- display: flex;
- justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
-.product-price-lable {
+.product-price-label {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
@@ -79,7 +79,6 @@
 }
 
 .product-title {
-    
     font-size: 70px;
     font-weight: 400;
     line-height: 78px;
@@ -92,7 +91,7 @@
 .background-image {
     width: 100%;
     height: 100%;
-    background-image: url("images/image-product.png");
+    background-image: url("images/flowers-background.png");
     background-repeat: no-repeat;
     position: absolute;
     top: 50px;
