@@ -104,3 +104,52 @@
 		background-color: red;
 }
 
+#paint-color-first-card {
+		background-color: #0e299e0e;
+		border: 2px solid rgba(5, 15, 124, 0.384);
+		color: rgb(0, 42, 140);
+		padding: 4px 4px;
+		text-align: center;
+		text-decoration: none;
+		font-size: 15px;
+}
+
+#paint-color-all-cards {
+		background-color: #0e299e0e;
+		border: 2px solid rgba(5, 15, 124, 0.384);
+		color: rgb(0, 42, 140);
+		padding: 4px 4px;
+		text-align: center;
+		text-decoration: none;
+		font-size: 15px;
+}
+
+#open-google {
+		background-color: #0e299e0e;
+		border: 2px solid rgba(5, 15, 124, 0.384);
+		color: rgb(0, 42, 140);
+		padding: 4px 4px;
+		text-align: center;
+		text-decoration: none;
+		font-size: 15px;
+}
+
+#output-console-log {
+		background-color: #0e299e0e;
+		border: 2px solid rgba(5, 15, 124, 0.384);
+		color: rgb(0, 42, 140);
+		padding: 4px 4px;
+		text-align: center;
+		text-decoration: none;
+		font-size: 15px;
+}
+
+#change-color-button {
+		background-color: #0e299e0e;
+		border: 2px solid rgba(5, 15, 124, 0.384);
+		color: rgb(0, 42, 140);
+		padding: 4px 4px;
+		text-align: center;
+		text-decoration: none;
+		font-size: 15px;
+}
