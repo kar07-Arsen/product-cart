@@ -1,30 +1,30 @@
-//---------------[Покраска одной карточки в другой цвет]-----------------
-
-const buttonPaintCard = document.querySelector('#paint-color-first-card');
-const productCardFirst = document.querySelector('.card-container');
-
-buttonPaintCard.addEventListener('click', () => {
-  productCardFirst.style.background = colorFirstCard;
-});
-
 //---------------[Константы для дальнейшего использования;цвета, ссылка]-----------------
 
 const colorAllCards = 'rgba(0, 255, 208, 1)';
 const colorFirstCard = 'rgba(225, 255, 0, 1)'
 const googleUrl = 'https://google.com';
 
+//---------------[Покраска одной карточки в другой цвет]-----------------
+
+const allbuttonscard = document.getElementsByClassName('buttons-product-card'); // Константа которая хранит в себе все кнопки с одним стилем
+const productCardFirst = document.querySelector('.card-container');
+
+const paintbuttoncard = allbuttonscard[0];
+paintbuttoncard.addEventListener('click', () => {
+  productCardFirst.style.background = colorFirstCard;
+});
+
 //---------------[Покраска всех карточек в другой цвет]-----------------
 
-const buttonPaintAllCards = document.querySelector('#paint-color-all-cards');
 const productCardsAll = document.querySelectorAll('.card-container');
+const buttonpaintallcards = allbuttonscard[1];
 
-buttonPaintAllCards.addEventListener('click', () => {
+buttonpaintallcards.addEventListener('click', () => {
   productCardsAll.forEach((card) => card.style.backgroundColor = colorAllCards);
 });
 
 //---------------[Функционал кнопки которая при нажати открывает гугл страницу]-----------------
-
-const buttonOpenGoogle = document.querySelector('#open-google');
+const buttonOpenGoogle = allbuttonscard[2];
 buttonOpenGoogle.addEventListener('click', openGoogle);
 
 function openGoogle(){
@@ -38,9 +38,8 @@ function openGoogle(){
 };
 
 //---------------[Функционал кнопки которая при нажати выводит сообщение в alert, console.log]-----------------
-
-const buttonOutputConsolelog = document.querySelector('#output-console-log');
-buttonOutputConsolelog.addEventListener('click', () => outputConsoleLog('Проверка'));
+const buttonOutput = allbuttonscard[3];
+buttonOutput.addEventListener('click', () => outputConsoleLog('Проверка'));
 
 function outputConsoleLog(message){
   console.log(message);
@@ -52,13 +51,15 @@ function outputConsoleLog(message){
 const mainHeading = document.querySelector('.product-title');
 
 mainHeading.addEventListener('mouseover', () => {
-  console.log(mainHeading);
+  console.log(mainHeading.textContent);
 })
 
 //---------------[Функционал при нажати на кнопку меняется ее цвет, затем при нажатии еще раз он меняется обратно]-----------------
 
-const buttonChangeColor = document.querySelector('#change-color-button');
-buttonChangeColor.addEventListener('click', () => {
-  buttonChangeColor.classList.toggle("red-color-button");
+const buttonchangecolor = allbuttonscard[4];
+buttonchangecolor.addEventListener('click', () => {
+  allbuttonscard[4].classList.toggle("bg-red");
 })
+
+
 
