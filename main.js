@@ -6,25 +6,24 @@ const googleUrl = 'https://google.com';
 
 //---------------[Покраска одной карточки в другой цвет]-----------------
 
-const allbuttonscard = document.getElementsByClassName('buttons-product-card'); // Константа которая хранит в себе все кнопки с одним стилем
 const productCardFirst = document.querySelector('.card-container');
 
-const paintbuttoncard = allbuttonscard[0];
-paintbuttoncard.addEventListener('click', () => {
+const buttonPaintCard = document.querySelector('#paint-color-first-card')
+buttonPaintCard.addEventListener('click', () => {
   productCardFirst.style.background = colorFirstCard;
 });
 
 //---------------[Покраска всех карточек в другой цвет]-----------------
 
 const productCardsAll = document.querySelectorAll('.card-container');
-const buttonpaintallcards = allbuttonscard[1];
+const buttonPaintAllCards = document.querySelector('#paint-color-all-cards');
 
-buttonpaintallcards.addEventListener('click', () => {
+buttonPaintAllCards.addEventListener('click', () => {
   productCardsAll.forEach((card) => card.style.backgroundColor = colorAllCards);
 });
 
 //---------------[Функционал кнопки которая при нажати открывает гугл страницу]-----------------
-const buttonOpenGoogle = allbuttonscard[2];
+const buttonOpenGoogle = document.querySelector('#open-google');
 buttonOpenGoogle.addEventListener('click', openGoogle);
 
 function openGoogle(){
@@ -38,7 +37,7 @@ function openGoogle(){
 };
 
 //---------------[Функционал кнопки которая при нажати выводит сообщение в alert, console.log]-----------------
-const buttonOutput = allbuttonscard[3];
+const buttonOutput = document.querySelector('#output-console-log');
 buttonOutput.addEventListener('click', () => outputConsoleLog('Проверка'));
 
 function outputConsoleLog(message){
@@ -56,10 +55,14 @@ mainHeading.addEventListener('mouseover', () => {
 
 //---------------[Функционал при нажати на кнопку меняется ее цвет, затем при нажатии еще раз он меняется обратно]-----------------
 
-const buttonchangecolor = allbuttonscard[4];
-buttonchangecolor.addEventListener('click', () => {
-  allbuttonscard[4].classList.toggle("bg-red");
+const buttonChangeColor = document.querySelector('#change-color-button');
+buttonChangeColor.addEventListener('click', () => {
+  buttonChangeColor.classList.toggle("bg-red");
 })
 
-
+buttonPaintCard.classList.add('product-card-button');
+buttonPaintAllCards.classList.add('product-card-button');
+buttonOpenGoogle.classList.add('product-card-button');
+buttonOutput.classList.add('product-card-button');
+buttonChangeColor.classList.add('product-card-button');
 
