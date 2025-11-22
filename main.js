@@ -60,9 +60,3 @@ buttonChangeColor.addEventListener('click', () => {
   buttonChangeColor.classList.toggle("bg-red");
 })
 
-buttonPaintCard.classList.add('product-card-button');
-buttonPaintAllCards.classList.add('product-card-button');
-buttonOpenGoogle.classList.add('product-card-button');
-buttonOutput.classList.add('product-card-button');
-buttonChangeColor.classList.add('product-card-button');
-
