@@ -18,20 +18,19 @@ showTemperature("Медине", 35);
 // если переданная скорость выше скорости звука — выводим лог 
 // Сверхзвуковая скорость", если ниже — "Дозвуковая скорость"? если равна — "Скорость звука"
 
-const speedOfSound = 335;
+const SPEEDOFSOUND = 335;
 
-function checkSpeedOfSound(speed){
-
-  if(speed > speedOfSound){
+function comparisonSpeedOfSound(speed){
+  if(speed > SPEEDOFSOUND) {
     console.log("Сверхзвуковая скорость!");
-  }else if(speed === speedOfSound){
+  } else if(speed === SPEEDOFSOUND) {
     console.log("Скорость звука");
-  }else{
+  } else {
     console.log("Дозвуковая скорость!");
   }
 }
 
-checkSpeedOfSound(333);
+comparisonSpeedOfSound(333);
 
 //-------------------------[5]------------------------------
 
@@ -42,35 +41,34 @@ checkSpeedOfSound(333);
 // выводим лог "(ваше название товара) приобретён. Спасибо за покупку!", 
 // если нет - обсчитываем разницу и выводим лог "Вам не хватает X$, пополните баланс". 
 
-let product = "помидоры";
-let productPrice = 230;
+const product = "помидоры";
+const productPrice = 230;
 
-const checkBudget = (currentBudget) => {
-  if(currentBudget >= productPrice){
+const purchaseProduct = (currentBudget) => {
+  if(currentBudget >= productPrice) {
     console.log(`Товар ${product} приобретен, спасибо за покупку!`);
   }
-  else{
-    let notEnough = currentBudget - productPrice;
-    let negativeNumberInPositive = Math.abs(notEnough);
+  else {
+    const notEnough = currentBudget - productPrice;
+    const negativeNumberInPositive = Math.abs(notEnough);
     console.log(`Вам не хватает ${negativeNumberInPositive}$, пополните баланс!`);
   }
 }
 
-checkBudget(229);
-checkBudget(230);
+purchaseProduct(229);
+purchaseProduct(230);
 
 //-------------------------[6]------------------------------
-
 
 //6. Создать 1 функцию и именовать её по своему усмотрению
 //7. Создать 3 переменных (без разницы каких) и именовать их по своему усмотрению
 
-function ShowMessage(message){
+function showMessage(message){
   console.log(`Вы отправили данное сообщение: ${message}`);
 }
 
-ShowMessage("Доброго дня, Пользователь!");
+showMessage("Доброго дня, Пользователь!");
 
-let phoneNames;
-let carsSpeed;
-let usersAge;
+let phoneName = "Iphone 13 mini pro";
+let carSpeed = 200;
+let userAge = "20";
