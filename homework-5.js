@@ -18,12 +18,12 @@ showTemperature("Медине", 35);
 // если переданная скорость выше скорости звука — выводим лог 
 // Сверхзвуковая скорость", если ниже — "Дозвуковая скорость"? если равна — "Скорость звука"
 
-const SPEEDOFSOUND = 335;
+const SPEED_OF_SOUND = 335;
 
 function comparisonSpeedOfSound(speed){
-  if(speed > SPEEDOFSOUND) {
+  if(speed > SPEED_OF_SOUND) {
     console.log("Сверхзвуковая скорость!");
-  } else if(speed === SPEEDOFSOUND) {
+  } else if(speed === SPEED_OF_SOUND) {
     console.log("Скорость звука");
   } else {
     console.log("Дозвуковая скорость!");
@@ -71,4 +71,4 @@ showMessage("Доброго дня, Пользователь!");
 
 let phoneName = "Iphone 13 mini pro";
 let carSpeed = 200;
-let userAge = "20";
+let userAge = 20;
