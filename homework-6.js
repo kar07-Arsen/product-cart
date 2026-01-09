@@ -6,12 +6,12 @@ const userInfo = {
   name: 'Arsen',
   surname: 'Kartlykov',
   email: 'kartlykov.arsen@mail.ru',
-  job: 'unemployed',
+  job: 'unEmployed',
   jobtitle: 'none',
   age: 20,
   coutry: 'Russian',
   city: 'Nalchik',
-  marialstatus: 'Not married'
+  marialstatus: 'notMarried'
 };
 
 // Создайте объект, который будет хранить данные об автомобиле (марка, модель, год выпуска, цвет, вид коробки).
@@ -20,20 +20,19 @@ const userInfo = {
 
 const carInfo = {
   brand: 'BMW',
-  model: 'M5 F90',
+  model: 'm5F90',
   year: 2023,
   color: 'black',
-  gearbox: '8th stage'
+  gearbox: '8thStage'
 };
 
-carInfo.owner = userInfo.name + " " + userInfo.surname;
+carInfo.owner = userInfo;
 
 // Написать функцию которая аргументом будет принимать объект, описанный в пункте №4. 
 // Она проверяет, есть ли в объекте свойство "максимальная скорость",
 // если нет - добавляет его и задает значение, если есть - прекращает выполнение (ничего не делает)
 
 function isKeyInObject(object){
-
     if(object.hasOwnProperty('maxspeed')){
       return;
     }
@@ -48,12 +47,11 @@ console.log(isKeyInObject(carInfo));
 //6. Написать функцию, которая получает первым аргументом  
 // — объект, а вторым аргументом — свойство объекта, которое нужно вывести и выводит его значение.
 
-function getValueObject(object, keyobj){
-
+function getObjectValues(object, keyobj){
     return object[keyobj];
 };
 
-console.log(getValueObject(carInfo, 'brand'));
+console.log(getObjectValues(carInfo, 'brand'));
 
 
 // 8. Создать массив, состоящий из объектов, где объект представляет 
@@ -146,11 +144,11 @@ console.log(arrayMerger);
 // (да, это редкий), нет - false (значит это не редкий).
 
 
-function addRarePropertyShort(booksArray) {
+function addRareProperty(booksArray) {
   return booksArray.map(book => ({
     ...book,
     isRare: book.year > 2000
   }));
 }
 
-console.log(addRarePropertyShort(arrayBooks));
+console.log(addRareProperty(arrayBooks));
