@@ -62,32 +62,32 @@ console.log(getObjectValues(carInfo, 'brand'));
 
 const arrayBooks = [
 
-   bookAlgebra = {
+    {
     name: "Алгебра",
     author: "Киселев А.П",
     yearofissiue: "2022",
     covercolor: "Белый",
     genre: "Неизвестен"
-  },
+    },
 
-  bookJavascript = {
+    {
     name: "JavaScript",
     author: "Дэвид Флэнаган",
     yearofissiue: "1996",
     covercolor: "Белый",
     genre: "Справочник"
-  },
+    },
 
-  bookHtml = {
+    {
     name: "HTML & CSS: Design and Build Web Sites",
     author: "Джон Дакет",
     yearofissiue: "2011",
     covercolor: "Темно-синий",
     genre: "Справочник"
-  }
+    }
 ];
 
-arrayBooks.push(bookTypescript = {
+arrayBooks.push({
     name: "Профессиональный TypeScript. ",
     author: "Борис черный",
     yearofissiue: "2023",
@@ -105,23 +105,23 @@ console.log(arrayBooks);
 
 const arrayBooksForMuslim = [
 
-    biographyOfTheProphet = {
+    {
     name: "Ар-Рахик аль-махтум",
     author: "ar-Rakhman alʹ-Mubarakfuri Safi",
     yearofissiue: "1976",
     covercolor: "Черный",
     genre: "Жизнеописание"
-  },
+    },
 
-    сollectionOfHadiths = {
+    {
     name: "Сахих Аль Бухари",
     author: "Мухаммад аль Бухари",
     yearofissiue: "801-900",
     covercolor: "Черный",
     genre: "Сборник хадисов"
-  },
+    },
 
-    lifeOfTheCompanions = {
+    {
     name: "Рассказы из жизни сподвижников",
     author: "	Абд-ар-Рахман Рафат аль-Баша",
     yearofissiue: "2020",
