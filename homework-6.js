@@ -47,7 +47,7 @@ console.log(checkMaxSpeed(carInfo));
 //6. Написать функцию, которая получает первым аргументом  
 // — объект, а вторым аргументом — свойство объекта, которое нужно вывести и выводит его значение.
 
-function getObjectValues(object, keyobj){
+function getObjectValue(object, keyobj){
     return object[keyobj];
 };
 
@@ -63,27 +63,27 @@ console.log(getObjectValue(carInfo, 'brand'));
 const arrayBooks = [
 
     {
-    name: "Алгебра",
-    author: "Киселев А.П",
-    yearOfIssue: "2022",
-    coverСolor: "Белый",
-    genre: "Неизвестен"
+      name: "Алгебра",
+      author: "Киселев А.П",
+      yearOfIssue: "2022",
+      coverСolor: "Белый",
+      genre: "Неизвестен"
     },
 
     {
-    name: "JavaScript",
-    author: "Дэвид Флэнаган",
-    yearOfIssue: "1996",
-    coverСolor: "Белый",
-    genre: "Справочник"
+      name: "JavaScript",
+      author: "Дэвид Флэнаган",
+      yearOfIssue: "1996",
+      coverСolor: "Белый",
+      genre: "Справочник"
     },
 
     {
-    name: "HTML & CSS: Design and Build Web Sites",
-    author: "Джон Дакет",
-    yearOfIssue: "2011",
-    coverСolor: "Темно-синий",
-    genre: "Справочник"
+      name: "HTML & CSS: Design and Build Web Sites",
+      author: "Джон Дакет",
+      yearOfIssue: "2011",
+      coverСolor: "Темно-синий",
+      genre: "Справочник"
     }
 ];
 
@@ -106,27 +106,27 @@ console.log(arrayBooks);
 const arrayBooksForMuslim = [
 
     {
-    name: "Ар-Рахик-аль-махтум",
-    author: "ar-Rakhman-alʹ-Mubarakfuri-Safi",
-    yearOfissue: "1976",
-    coverColor: "Черный",
-    genre: "Жизнеописание"
+      name: "Ар-Рахик-аль-махтум",
+      author: "ar-Rakhman-alʹ-Mubarakfuri-Safi",
+      yearOfissue: "1976",
+      coverColor: "Черный",
+      genre: "Жизнеописание"
     },
 
     {
-    name: "Сахих-Аль-Бухари",
-    author: "Мухаммад-аль-Бухари",
-    yearOfissue: "801-900",
-    coverColor: "Черный",
-    genre: "Сборник-хадисов"
+      name: "Сахих-Аль-Бухари",
+      author: "Мухаммад-аль-Бухари",
+      yearOfissue: "801-900",
+      coverColor: "Черный",
+      genre: "Сборник-хадисов"
     },
 
     {
-    name: "Рассказы из жизни сподвижников",
-    author: "Абд-ар-Рахман Рафат аль-Баша",
-    yearOfissue: "2020",
-    coverColor: "Зеленый",
-    genre: "Рассказ"
+      name: "Рассказы из жизни сподвижников",
+      author: "Абд-ар-Рахман Рафат аль-Баша",
+      yearOfissue: "2020",
+      coverColor: "Зеленый",
+      genre: "Рассказ"
     }
 ];
 
