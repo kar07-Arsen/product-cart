@@ -6,12 +6,12 @@ const userInfo = {
   name: 'Arsen',
   surname: 'Kartlykov',
   email: 'kartlykov.arsen@mail.ru',
-  job: 'unEmployed',
-  jobtitle: 'none',
+  job: 'unemployed',
+  jobTitle: 'none',
   age: 20,
   coutry: 'Russian',
   city: 'Nalchik',
-  marialstatus: 'notMarried'
+  marialStatus: 'notmarried'
 };
 
 // Создайте объект, который будет хранить данные об автомобиле (марка, модель, год выпуска, цвет, вид коробки).
@@ -20,10 +20,10 @@ const userInfo = {
 
 const carInfo = {
   brand: 'BMW',
-  model: 'm5F90',
+  model: 'm5f90',
   year: 2023,
   color: 'black',
-  gearbox: '8thStage'
+  gearBox: '8thstage'
 };
 
 carInfo.owner = userInfo;
@@ -32,7 +32,7 @@ carInfo.owner = userInfo;
 // Она проверяет, есть ли в объекте свойство "максимальная скорость",
 // если нет - добавляет его и задает значение, если есть - прекращает выполнение (ничего не делает)
 
-function isKeyInObject(object){
+function checkMaxSpeed(object){
     if(object.hasOwnProperty('maxspeed')){
       return;
     }
@@ -41,7 +41,7 @@ function isKeyInObject(object){
     }
 };
 
-console.log(isKeyInObject(carInfo));
+console.log(checkMaxSpeed(carInfo));
 
 
 //6. Написать функцию, которая получает первым аргументом  
@@ -51,7 +51,7 @@ function getObjectValues(object, keyobj){
     return object[keyobj];
 };
 
-console.log(getObjectValues(carInfo, 'brand'));
+console.log(getObjectValue(carInfo, 'brand'));
 
 
 // 8. Создать массив, состоящий из объектов, где объект представляет 
@@ -65,35 +65,35 @@ const arrayBooks = [
     {
     name: "Алгебра",
     author: "Киселев А.П",
-    yearofissiue: "2022",
-    covercolor: "Белый",
+    yearOfIssue: "2022",
+    coverСolor: "Белый",
     genre: "Неизвестен"
     },
 
     {
     name: "JavaScript",
     author: "Дэвид Флэнаган",
-    yearofissiue: "1996",
-    covercolor: "Белый",
+    yearOfIssue: "1996",
+    coverСolor: "Белый",
     genre: "Справочник"
     },
 
     {
     name: "HTML & CSS: Design and Build Web Sites",
     author: "Джон Дакет",
-    yearofissiue: "2011",
-    covercolor: "Темно-синий",
+    yearOfIssue: "2011",
+    coverСolor: "Темно-синий",
     genre: "Справочник"
     }
 ];
 
 arrayBooks.push({
-    name: "Профессиональный TypeScript. ",
-    author: "Борис черный",
-    yearofissiue: "2023",
-    covercolor: "Белый",
+    name: "Профессиональный-TypeScript.",
+    author: "Борис-черный",
+    yearOfIssue: "2023",
+    coverСolor: "Белый",
     genre: "Справочник"
-  })
+});
 
 console.log(arrayBooks);
 
@@ -106,26 +106,26 @@ console.log(arrayBooks);
 const arrayBooksForMuslim = [
 
     {
-    name: "Ар-Рахик аль-махтум",
-    author: "ar-Rakhman alʹ-Mubarakfuri Safi",
-    yearofissiue: "1976",
-    covercolor: "Черный",
+    name: "Ар-Рахик-аль-махтум",
+    author: "ar-Rakhman-alʹ-Mubarakfuri-Safi",
+    yearOfissue: "1976",
+    coverColor: "Черный",
     genre: "Жизнеописание"
     },
 
     {
-    name: "Сахих Аль Бухари",
-    author: "Мухаммад аль Бухари",
-    yearofissiue: "801-900",
-    covercolor: "Черный",
-    genre: "Сборник хадисов"
+    name: "Сахих-Аль-Бухари",
+    author: "Мухаммад-аль-Бухари",
+    yearOfissue: "801-900",
+    coverColor: "Черный",
+    genre: "Сборник-хадисов"
     },
 
     {
     name: "Рассказы из жизни сподвижников",
-    author: "	Абд-ар-Рахман Рафат аль-Баша",
-    yearofissiue: "2020",
-    covercolor: "Зеленый",
+    author: "Абд-ар-Рахман Рафат аль-Баша",
+    yearOfissue: "2020",
+    coverColor: "Зеленый",
     genre: "Рассказ"
     }
 ];
