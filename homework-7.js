@@ -31,7 +31,7 @@ const numbersUpToFive = [1, 2, 3, 4, 5];
 const numbersUpToTen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const reverseArray = array => {
-  return console.log(array.reverse());
+  array.reverse();
 }
 
 reverseArray(numbersUpToTen);
@@ -56,7 +56,9 @@ console.log(arrayOnlyCom);
 // [HOMEWORK-8]Перебрать массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2, а те, у кого id больше 5, имели postId: 1
 
 const modifiedArray = arrayObjects.map(elem => {
-  return {...elem, postId: elem.id <= 5 ? 2 : 1}
+  return {
+    ...elem, 
+    postId: elem.id <= 5 ? 2 : 1}
 });
 
 console.log(modifiedArray);
@@ -75,11 +77,13 @@ console.log(arrayOnlyNameId);
 //[HOMEWORK-10] Перебираем массив, добавляем объектам свойство isInvalid и проверяем: 
 //если длина тела сообщения (body) больше 180 символов - устанавливаем true, меньше - false.
 
-const itemsToUpdate = arrayObjects.map(elem => {
-  return {...elem, IsInvalid: elem.body.length >= 180 ? true : false}
+const arrayIsLength = arrayObjects.map(elem => {
+  return {
+    ...elem, 
+    IsInvalid: elem.body.length >= 180 ? true : false}
 })
 
-console.log(itemsToUpdate);
+console.log(arrayIsLength);
 
 // [HOWEWORK-11] Почитать про метод массива reduce. Используя его, вывести массив почт и провернуть тоже самое с помощью метода map
 
