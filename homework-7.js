@@ -58,7 +58,8 @@ console.log(arrayOnlyCom);
 const modifiedArray = arrayObjects.map(elem => {
   return {
     ...elem, 
-    postId: elem.id <= 5 ? 2 : 1}
+    postId: elem.id <= 5 ? 2 : 1
+  }
 });
 
 console.log(modifiedArray);
@@ -70,7 +71,7 @@ const arrayOnlyNameId = arrayObjects.map(elem => {
     id: elem.id,
     name: elem.name
   };
-})
+});
 
 console.log(arrayOnlyNameId);
 
@@ -80,8 +81,9 @@ console.log(arrayOnlyNameId);
 const arrayIsLength = arrayObjects.map(elem => {
   return {
     ...elem, 
-    IsInvalid: elem.body.length >= 180 ? true : false}
-})
+    IsInvalid: elem.body.length >= 180 ? true : false
+  }
+});
 
 console.log(arrayIsLength);
 
@@ -90,7 +92,7 @@ console.log(arrayIsLength);
 const emailWithReduce = arrayObjects.reduce((acc, elem) => {
   acc.push(elem.email);
   return acc;
-}, [])
+}, []);
 
 console.log(emailWithReduce);
 //[HOMEWORK-12] Почитать про методы toString(), join() и перебрав массив с задания №11, привести его к строке.
@@ -102,3 +104,5 @@ console.log('Строка из email-ов:', emailToString);
 const emailJoin = emailWithReduce.join(' ; ');
 
 console.log(emailJoin);
+
+
