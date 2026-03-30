@@ -1,4 +1,4 @@
-import { productsCard } from "./productsCardArray.js"
+import { productCards } from "./product-cards.js"
 
 const productTemplate = document.querySelector("#product-template");
 
@@ -8,28 +8,29 @@ const showProductCards = (productsArray) => {
   productsArray.forEach(product => {
   const cloneTemplateProduct = productTemplate.content.cloneNode(true);
 
-  cloneTemplateProduct.querySelector(".product-image").setAttribute('src', product.productImage)
-  cloneTemplateProduct.querySelector(".product-category").textContent = product.productCategory;
-  cloneTemplateProduct.querySelector(".product-name").textContent = product.productName;
-  cloneTemplateProduct.querySelector(".product-description").textContent = product.productDescription;
-  cloneTemplateProduct.querySelector(".product-compound-span").textContent = product.productCompoundSpan;
+  cloneTemplateProduct.querySelector(".product-image").setAttribute('src', `./images/${product.image}.png`)
+  cloneTemplateProduct.querySelector(".product-category").textContent = product.category;
+  cloneTemplateProduct.querySelector(".product-name").textContent = product.name;
+  cloneTemplateProduct.querySelector(".product-description").textContent = product.description;
 
-  const compoundItems = cloneTemplateProduct.querySelectorAll(".product-compound-item");
-  compoundItems[0].textContent = product.productItemOne;
-  compoundItems[1].textContent = product.productItemTwo;
-  compoundItems[2].textContent = product.productItemThree;
+  const ul = cloneTemplateProduct.querySelector('.product-compound');
 
-  cloneTemplateProduct.querySelector(".product-price-label").textContent = product.productPriceLabel;
-  cloneTemplateProduct.querySelector(".product-price").textContent = product.productPrice;
+  product.compound.forEach(elem => {
+  const li = document.createElement('li');
+  li.textContent = `${elem}`;
+  ul.appendChild(li);
+  });
+
+  cloneTemplateProduct.querySelector(".product-price").textContent = `${product.price} ${product.currency}`;
+  //cloneTemplateProduct.querySelector(".product-currency").textContent = product.currency;
 
   productCardList.appendChild(cloneTemplateProduct);
-
   })
 }
 
 // [Используя метод .reduce(), получить массив объектов, где ключем является название продукта, а значением - его описание]
 
-const productKeyValue = productsCard.reduce((acc, product) => {
+const productKeyValue = productCards.reduce((acc, product) => {
   acc.push({[product.productName]: product.Description});
   return acc;
 }, []);
@@ -40,7 +41,7 @@ const productKeyValue = productsCard.reduce((acc, product) => {
    одна возвращает количество карточек, которое нужно ввести, другая - рендерить эти карточки (принимая массив аргументом)
 */
 
-const getNumberUser = () => {
+const numberOfCards = () => {
   const cardQuantity =+ prompt("Сколько карточек отобразить? 1 - 5");
 
   if(cardQuantity === null || cardQuantity === "")
@@ -53,5 +54,5 @@ const getNumberUser = () => {
   return cardQuantity;
 };
 
-  const selectedProducts = productsCard.slice(0, getNumberUser());
+  const selectedProducts = productCards.slice(0, numberOfCards());
   showProductCards(selectedProducts);
