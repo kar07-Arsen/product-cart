@@ -1,5 +1,5 @@
 //---------------[Константы для дальнейшего использования;цвета, ссылка]-----------------
-
+/*
 const colorAllCards = 'rgba(0, 255, 208, 1)';
 const colorFirstCard = 'rgba(225, 255, 0, 1)'
 const googleUrl = 'https://google.com';
@@ -60,3 +60,4 @@ buttonChangeColor.addEventListener('click', () => {
   buttonChangeColor.classList.toggle("bg-red");
 })
 
+*/ 
