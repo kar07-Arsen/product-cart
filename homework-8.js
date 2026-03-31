@@ -13,24 +13,22 @@ const showProductCards = (productsArray) => {
   cloneTemplateProduct.querySelector(".product-name").textContent = product.name;
   cloneTemplateProduct.querySelector(".product-description").textContent = product.description;
 
-  const ul = cloneTemplateProduct.querySelector('.product-compound');
+  const productСompound = cloneTemplateProduct.querySelector('.product-compound');
 
   product.compound.forEach(elem => {
-  const li = document.createElement('li');
-  li.textContent = `${elem}`;
-  ul.appendChild(li);
-  });
+    const li = document.createElement('li');
+    li.textContent = `${elem}`;
+    productСompound.appendChild(li);
+});
 
   cloneTemplateProduct.querySelector(".product-price").textContent = `${product.price} ${product.currency}`;
-  //cloneTemplateProduct.querySelector(".product-currency").textContent = product.currency;
-
   productCardList.appendChild(cloneTemplateProduct);
-  })
+  });
 }
 
 // [Используя метод .reduce(), получить массив объектов, где ключем является название продукта, а значением - его описание]
 
-const productKeyValue = productCards.reduce((acc, product) => {
+const productsDescriptions  = productCards.reduce((acc, product) => {
   acc.push({[product.productName]: product.Description});
   return acc;
 }, []);
@@ -41,18 +39,19 @@ const productKeyValue = productCards.reduce((acc, product) => {
    одна возвращает количество карточек, которое нужно ввести, другая - рендерить эти карточки (принимая массив аргументом)
 */
 
-const numberOfCards = () => {
+const getСardsNumber = () => {
   const cardQuantity =+ prompt("Сколько карточек отобразить? 1 - 5");
 
-  if(cardQuantity === null || cardQuantity === "")
-    return 0;
+  if (cardQuantity === null || cardQuantity === "") {
+    return getСardsNumber();
+  }
 
-  if(cardQuantity < 1 || cardQuantity > 5) {
-    return alert('Вы ввели неверное значение! 1 - 5');
+  if (cardQuantity < 1 || cardQuantity > 5) {
+    return getСardsNumber();
   }
 
   return cardQuantity;
 };
 
-  const selectedProducts = productCards.slice(0, numberOfCards());
+  const selectedProducts = productCards.slice(0, getСardsNumber());
   showProductCards(selectedProducts);
