@@ -28,7 +28,7 @@ const showProductCards = (productsArray) => {
 
 // [Используя метод .reduce(), получить массив объектов, где ключем является название продукта, а значением - его описание]
 
-const productsDescriptions  = productCards.reduce((acc, product) => {
+const productsDescriptions = productCards.reduce((acc, product) => {
   acc.push({[product.productName]: product.Description});
   return acc;
 }, []);
@@ -42,14 +42,10 @@ const productsDescriptions  = productCards.reduce((acc, product) => {
 const getСardsNumber = () => {
   const cardQuantity =+ prompt("Сколько карточек отобразить? 1 - 5");
 
-  if (cardQuantity === null || cardQuantity === "") {
+  if (!cardQuantity || cardQuantity < 1 || cardQuantity > 5) {
     return getСardsNumber();
   }
-
-  if (cardQuantity < 1 || cardQuantity > 5) {
-    return getСardsNumber();
-  }
-
+  
   return cardQuantity;
 };
 
