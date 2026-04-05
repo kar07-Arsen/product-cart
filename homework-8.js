@@ -40,7 +40,7 @@ const productsDescriptions = productCards.reduce((acc, product) => {
 */
 
 const getСardsNumber = () => {
-  const cardQuantity =+ prompt("Сколько карточек отобразить? 1 - 5");
+  const cardQuantity = +prompt("Сколько карточек отобразить? 1 - 5");
 
   if (!cardQuantity || cardQuantity < 1 || cardQuantity > 5) {
     return getСardsNumber();
