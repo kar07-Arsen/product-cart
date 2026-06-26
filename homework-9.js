@@ -10,7 +10,7 @@ formEmail.addEventListener('submit', (event) => {
     console.log(data);
 })
 
-// Уровень 2 #5, 6
+// Уровень 2 #5, 7
 
 const btnModal = document.querySelector('.btnModal');
 const btnForm = document.querySelector('#buttonForm');
