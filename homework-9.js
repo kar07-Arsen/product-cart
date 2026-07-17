@@ -29,11 +29,6 @@ btnModal.addEventListener('click', () => {
 
 })
 
-closeModal.addEventListener('click', () => {
-    overlay.classList.remove('overlay');
-    modalWindow.classList.remove('modal-showed');
-    document.body.style.overflow = 'visible';
-})
 
 
 regForm.addEventListener('submit', (e) => {
@@ -61,4 +56,5 @@ regForm.addEventListener('submit', (e) => {
     document.body.style.overflow = 'visible';
     const user = Object.fromEntries(formData); 
 });
+
         

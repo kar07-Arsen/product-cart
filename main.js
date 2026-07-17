@@ -1,3 +1,15 @@
+//-------------[ДЗ-10.2]
+// На основе этого создать файл main.js. Его единственного использовать
+// в index.html, а все остальные js файлы импортировать в главный.
+
+import './homework-5.js';
+import './homework-6.js';
+import './homework-7.js';
+import './homework-8.js';
+import './homework-9.js';
+import './modal.js';
+import './form.js';
+
 //---------------[Константы для дальнейшего использования;цвета, ссылка]----------------- 
 
 const colorAllCards = 'rgba(0, 255, 208, 1)';
@@ -59,3 +71,42 @@ const buttonChangeColor = document.querySelector('#change-color-button');
 buttonChangeColor.addEventListener('click', () => {
   buttonChangeColor.classList.toggle("bg-red");
 });
+
+/* [HOMEWORK-10] . Создать структуру на ваш выбор, как было показано в лекции (имеется ввиду - с машинами/бьюти-продуктами). 
+   Придумайте свою структуру и реализуйте наследуемость классов 
+*/
+
+class Developers {
+  constructor(name, age, country, position, salary, experience) {
+    this.name = name,
+    this.age = age,
+    this.country = country,
+    this.position = position,
+    this.salary = salary,
+    this.experience = experience
+  }
+
+  showInfo() {
+    console.log(`Разработчик: ${this.name}, возраст: ${this.age}, страна: ${this.country}, 
+    должность: ${this.position} разработчик, зарплата: ${this.salary}, стаж: ${this.experience}`);
+  }
+};
+
+const itDevelopers = new Developers('Арсен', 20, 'Россия', 'Frontend', 100000, 1);
+itDevelopers.showInfo();
+
+class CompanyEmployess extends Developers {
+  constructor(name, age, country, position, salary, experience, isAnEmployee) {
+    super(name, age, country, position, salary, experience);
+    this.isAnEmployee = isAnEmployee;
+  }
+  showInfo() {
+    console.log(`Разработчик: ${this.name}, возраст: ${this.age}, страна: ${this.country}, 
+    должность: ${this.position} разработчик, зарплата: ${this.salary}, стаж: ${this.experience}, сотрудник:${this.isAnEmployee}`);
+  }
+
+}
+
+const employees = new CompanyEmployess('Арсен', 20, 'Россия', 'Frontend', 100000, 1, 'True');
+employees.showInfo();
+

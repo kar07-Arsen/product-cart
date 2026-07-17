@@ -16,7 +16,7 @@
     <button id="output-console-log" class="product-card-button">Output</button>
     <button id="change-color-button" class="product-card-button">Button change color</button>
     <button type="button" class="btnModal">Регистрация</button>
-    <div class="modal">
+    <div class="modal" id="modalwindow">
         <div id="closeModal">&#10006;</div>
         <form id="regUserForm">
         <ul class="listModal">
@@ -43,7 +43,10 @@
              <li>
                 <label for="userConfirmPassword">Повторите пароль:</label>
                 <input name="userConfirmPassword" type="password" id="userConfirmPassword" placeholder="Подтверждение пароля" required>
-                <button type="submit" id="buttonForm">Отправить</button>
+                <div class="buttonsForm">
+                    <button type="submit" id="buttonForm">Отправить</button>
+                    <button type="reset">Сбросить</button>
+                </div>
             </li>
         </ul>
         </form>
@@ -97,11 +100,6 @@
           </div>
     </footer>
     <div class="modal"></div>
-    <script src="main.js"></script>
-    <script src="homework-5.js"></script>
-    <script src="homework-6.js"></script>
-    <script type="module" src="homework-7.js"></script>
-    <script type="module" src="homework-8.js"></script>
-    <script src="homework-9.js"></script>
+    <script src="main.js" type="module"></script>
 </body>
 </html>
