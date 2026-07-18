@@ -23,7 +23,7 @@ class Modal {
     }
 
     modalOpenly() {
-        if(this.isOpenly === true) {
+        if (this.isOpenly === true) {
             console.log('Модальное окно открыто!');
         } else  {
             console.log('Модальное окно закрыто!')
@@ -40,16 +40,16 @@ class Modal {
 
 }
 
-const ModalWindow = new Modal(modalWindowId);
-ModalWindow.openModal()
+const modalWindow = new Modal(modalWindowId);
+modalWindow.openModal()
 
-ModalWindow.modalOpenly();
+modalWindow.modalOpenly();
 
 setTimeout(() => {
-  ModalWindow.closeModal();
-  ModalWindow.modalOpenly()
+  modalWindow.closeModal();
+  modalWindow.modalOpenly()
 }, 9000);
 
-ModalWindow.closeModalClick()
+modalWindow.closeModalClick()
 
 

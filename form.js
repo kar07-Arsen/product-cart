@@ -15,13 +15,14 @@ class Form {
     getAllValue() {
         
         idForm.addEventListener('submit', (events) => {
-        events.preventDefault();
+            events.preventDefault();
         
-        this.formValue = new FormData(this.formId);
-        this.formValue.append('createdOn', new Date());
-        this.formValue.forEach((value, key) => {
-        console.log(`${key} : ${value}`);
-    }); 
+            this.formValue = new FormData(this.formId);
+            this.formValue.append('createdOn', new Date());
+            this.formValue.forEach((value, key) => {
+            console.log(`${key} : ${value}`);
+        }); 
+        
         overlay.classList.remove('overlay');
         modalWindow.classList.remove('modal-showed');
         document.body.style.overflow = 'visible';
