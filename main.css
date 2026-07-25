@@ -9,6 +9,11 @@
     font-weight: 400;
 }
 
+#buttonsForm {
+    display: flex;   
+}
+
+
 .card-container {
     width: 340px;
     height: 573px;
