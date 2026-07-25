@@ -20,29 +20,29 @@ class Form {
             this.formValue = new FormData(this.formId);
             this.formValue.append('createdOn', new Date());
             this.formValue.forEach((value, key) => {
-            console.log(`${key} : ${value}`);
-        }); 
+                console.log(`${key} : ${value}`);
+            }); 
         
-        overlay.classList.remove('overlay');
-        modalWindow.classList.remove('modal-showed');
-        document.body.style.overflow = 'visible';
-        this.user = Object.fromEntries(this.formValue);
-        return this.user;
-    })
-};
+            overlay.classList.remove('overlay');
+            modalWindow.classList.remove('modal-showed');
+            document.body.style.overflow = 'visible';
+            this.user = Object.fromEntries(this.formValue);
+            return this.user;
+        })
+    };
 
     checkValidation() {
 
         this.formId.addEventListener('submit', () => {
             if (!this.formId.checkValidity()) {
-            return false;
-        } 
-        return true;
+                return false;
+            } 
+            return true;
         })
     };
 
     resetValues() {
-            this.formId.reset();
+        this.formId.reset();
     }
 }
 

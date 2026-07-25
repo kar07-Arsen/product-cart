@@ -38,7 +38,7 @@ class Drink {
 
         getTemperature() {
             return {
-                temperature:this.#temperature
+                 temperature:this.#temperature
             } 
         }
 
@@ -46,12 +46,12 @@ class Drink {
             return this.#temperature = temperature;
         }
 
-        #toPrepare() {
+        #makeDrink() {
            return `Ваш заказ принят! Ожидайте!`;
         }
 
-        toServe() {
-            return this.#toPrepare()
+        giveDrink() {
+            return this.#makeDrink()
         }
 }
 
@@ -117,7 +117,7 @@ class Cafe {
     }
 
     orderDrink(drink) {
-        return console.log(drink.toServe())
+        return console.log(drink.giveDrink())
     }
 
 }
