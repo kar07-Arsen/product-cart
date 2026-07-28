@@ -38,7 +38,7 @@ class Drink {
 
         getTemperature() {
             return {
-                 temperature:this.#temperature
+                temperature: this.#temperature
             } 
         }
 
